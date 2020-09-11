@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_submit_project"
+        android:title="@string/submit_button_text"
+        android:actionLayout="@layout/menu_action_submit_button"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeaderBoardActivity">
+
+<!--    <include-->
+<!--        android:id="@+id/mainToolBar"-->
+<!--        layout="@layout/app_toolbar" />-->
+    <LinearLayout
+        android:id="@+id/leaderboard_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="55dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Leaderboard"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/menu_submit_button"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:text="Submit"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/pageTab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/leaderboard_menu"
+        app:layout_constraintStart_toStartOf="@id/leaderboard_menu"
+        app:layout_constraintTop_toBottomOf="@id/leaderboard_menu"
+        app:tabIndicatorColor="#FFFFFF"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextColor="#FFF">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/learningLeaders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learning Leaders" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/skillLeaders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skill IQ Leaders" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/leaderboard_menu"
+        app:layout_constraintStart_toStartOf="@id/leaderboard_menu"
+        app:layout_constraintTop_toBottomOf="@id/pageTab" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

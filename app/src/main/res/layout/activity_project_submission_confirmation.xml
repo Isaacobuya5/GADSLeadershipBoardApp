@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".ProjectSubmissionConfirmation">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/modal_bg"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_cancel_submission"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="70dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/confrimation_text"
+            android:orientation="horizontal"
+            android:layout_below="@id/cancel"
+            android:layout_marginBottom="48dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Are you sure "
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\?"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_project"
+            android:layout_below="@id/confrimation_text"
+            android:layout_width="150dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="50dp"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textColor="#ffae45"
+            android:background="@drawable/confirmation_button"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
