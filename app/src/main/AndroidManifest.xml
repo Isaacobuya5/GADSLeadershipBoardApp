@@ -12,16 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/DefaultTheme">
-        <activity android:name=".SubmissionSuccesful"></activity>
-        <activity android:name=".SubmissionFailed" />
-        <activity android:name=".ProjectSubmissionConfirmation" />
+        <activity android:name=".SubmissionSuccesful"
+            android:theme="@style/AppTheme.TransLucentTheme"></activity>
+        <activity android:name=".SubmissionFailed"
+            android:theme="@style/AppTheme.TransLucentTheme"/>
+        <activity android:name=".ProjectSubmissionConfirmation"
+            android:theme="@style/AppTheme.TransLucentTheme"/>
         <activity
             android:name=".SubmitProjectActivity"
             android:theme="@style/SubmitProjectActivityTheme" />
         <activity
             android:name=".LeaderBoardActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
